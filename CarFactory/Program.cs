@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*Паттерн "Абстрактная фабрика" (Abstract Factory) предоставляет интерфейс для создания семейств взаимосвязанных объектов 
+ с определенными интерфейсами без указания конкретных типов данных объектов.*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -77,7 +80,7 @@ namespace CarFactory
             jCar.ReleaseCar(jEngine);
 
 
-            //постороение российской фабрики 
+            //построение российской фабрики 
             RussianFactory rFactory = new RussianFactory();
             //создание российкого двигателя
             IEngine rEngine = rFactory.createEngine();
@@ -85,8 +88,6 @@ namespace CarFactory
             ICar rCar = rFactory.createCar();
             //выпуск россиского автомобиля
             rCar.ReleaseCar(rEngine);
-
-
         }
     }
 }
